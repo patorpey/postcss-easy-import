@@ -1,5 +1,3 @@
-var postcss = require('postcss');
-var assign = require('object-assign');
 var postcssImport = require('postcss-import');
 var isGlob = require('is-glob');
 var resolveGlob = require('./lib/resolve-glob');
@@ -10,8 +8,8 @@ function resolve(id) {
     return resolver.apply(null, arguments);
 }
 
-module.exports = postcss.plugin('postcss-easy-import', function (opts) {
-    opts = assign({
+module.exports = (opts = {}) => {
+    opts = Object.assign({
         prefix: false,
         extensions: '.css'
     }, opts);
@@ -43,5 +41,10 @@ module.exports = postcss.plugin('postcss-easy-import', function (opts) {
         );
     }
 
-    return postcss([postcssImport(opts)]);
-});
+    return {
+        postcssPlugin: "postcss-easy-import",
+        Once: postcssImport(opts).Once
+    }
+};
+
+module.exports.postcss = true;

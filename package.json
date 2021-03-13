@@ -1,6 +1,6 @@
 {
   "name": "postcss-easy-import",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "PostCSS plugin to inline @import rules content with extra features",
   "keywords": [
     "postcss",
@@ -16,28 +16,34 @@
       "name": "Simon Smith",
       "url": "https://simonsmith.io",
       "email": "me@simonsmith.io"
+    },
+    {
+      "name": "Peter A. Torpey",
+      "url": "https://petertorpey.com/",
+      "email": "peter@petertorpey.com"
     }
   ],
   "license": "MIT",
-  "repository": "TrySound/postcss-easy-import",
+  "repository": "patorpey/postcss-easy-import",
   "bugs": {
-    "url": "https://github.com/TrySound/postcss-easy-import/issues"
+    "url": "https://github.com/patorpey/postcss-easy-import/issues"
   },
-  "homepage": "https://github.com/TrySound/postcss-easy-import",
+  "homepage": "https://github.com/patorpey/postcss-easy-import",
   "dependencies": {
-    "globby": "^6.1.0",
-    "is-glob": "^4.0.0",
-    "lodash": "^4.17.4",
-    "object-assign": "^4.0.1",
-    "pify": "^3.0.0",
-    "postcss": "^6.0.11",
-    "postcss-import": "^11.1.0",
-    "resolve": "^1.1.7"
+    "globby": "^11.0.2",
+    "is-glob": "^4.0.1",
+    "lodash": "^4.17.21",
+    "pify": "^5.0.0",
+    "postcss-import": "^14.0.0",
+    "resolve": "^1.20.0"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "eslint": "^3.11.1",
-    "eslint-config-postcss": "^2.0.0"
+    "ava": "^3.15.0",
+    "eslint": "^7.22.0",
+    "eslint-config-postcss": "^4.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.8"
   },
   "files": [
     "index.js",
@@ -49,6 +55,6 @@
     "prepublish": "npm test"
   },
   "eslintConfig": {
-    "extends": "postcss/es5"
+    "extends": "eslint-config-postcss"
   }
 }
