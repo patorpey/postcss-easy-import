@@ -1,8 +1,8 @@
-import test from 'ava';
-import path from 'path';
-import addPrefix from '../lib/add-prefix.js';
-import hasPrefix from '../lib/has-prefix.js';
-import hasExtensions from '../lib/has-extensions.js';
+const test = require('ava');
+const path = require('path');
+const addPrefix = require('../lib/add-prefix.js');
+const hasPrefix = require('../lib/has-prefix.js');
+const hasExtensions = require('../lib/has-extensions.js');
 
 test('add-prefix', t => {
     t.is(

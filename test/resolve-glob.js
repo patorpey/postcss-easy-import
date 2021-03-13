@@ -1,6 +1,6 @@
-import test from 'ava';
-import path from 'path';
-import resolveGlob from '../lib/resolve-glob.js';
+const test = require('ava');
+const path = require('path');
+const resolveGlob = require('../lib/resolve-glob.js');
 
 const resolve = p => path.resolve('fixtures/glob', p);
 

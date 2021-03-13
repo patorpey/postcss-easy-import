@@ -1,7 +1,7 @@
-import test from 'ava';
-import easyImport from '../';
-import path from 'path';
-import postcss from 'postcss';
+const test = require('ava');
+const easyImport = require('../index.js');
+const path = require('path');
+const postcss = require('postcss');
 
 const msg = err => 'postcss-easy-import: ' + err;
 

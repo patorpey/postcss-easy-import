@@ -1,6 +1,6 @@
-import test from 'ava';
-import path from 'path';
-import resolveModule from '../lib/resolve-module.js';
+const test = require('ava');
+const path = require('path');
+const resolveModule = require('../lib/resolve-module.js');
 
 const resolve = p => path.resolve('fixtures/module', p);
 
