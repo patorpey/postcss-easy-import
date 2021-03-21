@@ -95,7 +95,7 @@ test('should resolve every match if prefix is not defined', t => { // eslint-dis
         extensions: ['.css', '.scss'],
         path: []
     }).then(result => {
-        t.deepEqual(result, [
+        t.deepEqual(result.sort(), [
             'prefixed/without/_baz.css',
             'prefixed/without/_foo.css',
             'prefixed/without/_z.css',
@@ -104,7 +104,7 @@ test('should resolve every match if prefix is not defined', t => { // eslint-dis
             'prefixed/without/file.css',
             'prefixed/without/foo.css',
             'prefixed/without/z.css'
-        ].map(resolve));
+        ].map(resolve).sort());
     });
 });
 

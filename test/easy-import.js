@@ -3,7 +3,7 @@ const easyImport = require('../index.js');
 const path = require('path');
 const postcss = require('postcss');
 
-const msg = err => 'postcss-easy-import: ' + err;
+const msg = err => ({message: 'postcss-easy-import: ' + err});
 
 // for tests to work with ava >=0.18
 process.chdir(__dirname);
