@@ -43,7 +43,7 @@ module.exports = (opts = {}) => {
 
     return {
         postcssPlugin: "postcss-easy-import",
-        Once: postcssImport(opts).Once
+        ...postcssImport(opts)
     }
 };
 
